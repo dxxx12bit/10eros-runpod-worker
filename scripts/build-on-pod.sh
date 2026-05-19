@@ -21,11 +21,11 @@ set -euo pipefail
 #   bash scripts/build-on-pod.sh
 #
 # Optional:
-#   CUDA_LEVEL=12.6                # Force older CUDA 12.6 base (default is 12.8;
+CUDA_LEVEL=12.8                # Force older CUDA 12.6 base (default is 12.8;
 #                                  #   12.8 covers Ampere/Ada/Hopper/Blackwell, so
 #                                  #   you only need 12.6 for hosts pinned to an
 #                                  #   older driver)
-#   PYTORCH_VERSION=2.5.0          # Pin PyTorch; default is "latest" on the index
+PYTORCH_VERSION=2.5.0          # Pin PyTorch; default is "latest" on the index
 #   BRANCH=main                    # Git branch to build from (the script always
 #                                  #   clones from REPO_URL, never the cwd)
 #   REPO_URL=...                   # Override for forks
@@ -40,7 +40,7 @@ set -euo pipefail
 #   - ~120 GB free disk for fp8 builds, ~200 GB for bf16.
 # =============================================================================
 
-REPO_URL="${REPO_URL:-https://github.com/Jmendapara/10eros-runpod-worker.git}"
+REPO_URL="${REPO_URL:-https://github.com/dxxx12bit/10eros-runpod-worker.git}"
 BRANCH="${BRANCH:-main}"
 COMFYUI_VERSION="${COMFYUI_VERSION:-latest}"
 
